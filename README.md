@@ -8,6 +8,8 @@ and grab me chapstick from accross my desk upon a command being sent to it.
 
 The *ChapstickRobot* then turned into just a passion project for fun & giggles.
 
+I highly recommend taking a look at the [project collage](/ChapstickRobotProject.png) which shows everything in a lot more detail than the brief overview here (and it's got *PICTURES*)
+
 # Directory Description
 
 "ChapstickRobotFirmware" is the PlatformIO project directory which holds the `platformio.ini` file, for opening it in vscode with the PlatformIO extension.
@@ -28,15 +30,8 @@ virtual environment, then use the "requirements.txt" file to install these packa
 "Parts" contains the STL files for the different parts on the robot, including the claw/elevator-arm, moveable "finger" and the two brackets for mounting the elevator
 servo and electronics
 
-"Docs" Contains everything you would need to know about this project, specifically the collage, which puts together this project's journey visually and describes
-how softare and other things work.
-
-# Documentation
-
-Most documentation for this project is located in the `Docs` folder. The most interesting part would be the collage, located in `Docs/ProjectCollage/ChapstickRobotProject.png`
-This is a high resolution image generated with Draw.io which depicts much of the project, and how everything works together. 
-
-There are two videos as well, in `Docs/VideoDemos` showing the robot in action. 
+"Docs" Contains everything you would need to know about this project, and also contains the source draw.io file for the project collage in the repository root.
+"Docs" also contains a couple demo videos of the [robot working](/Docs/VideoDemos/RobotDemo.mp4), and it's [cad](/Docs/VideoDemos/RobotCad.mp4) respectively. 
 
 # ChapsterInterface Controls
 
