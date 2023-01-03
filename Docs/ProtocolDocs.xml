@@ -1,0 +1,43 @@
+<!-- Fields must be sent as Least Significant Byte first-->
+<!-- Header is single byte, which represents the ID of the message-->
+
+<ChapsterProtocol>
+
+    <ChapsterMessage name="Drive Distance" Description="Commands robot to drive [Drive Distance] cm in [Drive Direction] direction">
+        <Header HexValue="0x0A"/>
+        <Field Length="1" Name="Drive Direction" Description="0 or 1, 0 is reverse, 1 is forward."/>
+        <Field Length="2" Name="Drive Distance" Description="The distance to drive, in cm"/>
+    </ChapsterMessage>
+    
+    <ChapsterMessage name="Set Speed" Description="Sets the percent speed of the drivetrain">
+        <Header HexValue="0x0B"/>
+        <Field Length="1" Name="Drive Direction"/>
+        <Field Length="1" Name="Drive Speed" Description="in whole number percent from 0 to 100, scaled by 0.01 when given to robot"/>
+    </ChapsterMessage>
+
+    <ChapsterMessage name="Set Turn" Description="Sets the motors to turn the robot either CW or CCW">
+        <Header HexValue="0x0C"/>
+        <Field Length="1" Name="TurnDirection" Description="either 0 or 1, 1 being clockwise, 0 being counter-clockwise"/>
+    </ChapsterMessage>
+
+    <ChapsterMessage name="ClawPosition" Description="Sets the claw to either it's open or close setpoint">
+        <Header HexValue="0x0F"/>
+        <Field Length="1" Name="Claw Position" Description="0 or 1, 0 is claw close, 1 is claw open"/>
+    </ChapsterMessage>
+
+    <ChapsterMessage name="ElevatorPosition" Description="Sets the elevator to either it's up or down position">
+        <Header HexValue="0x10"/>
+        <Field Length="1" Name="Elevator Position" Description="0 or 1, 0 is elevator down, 1 is elevator up"/>
+    </ChapsterMessage>
+
+    <!-- Since this is a pre-programmed routine, it takes no parameters-->
+    <ChapsterMessage name="Retrieve" Description="Performs a retrieve routine, to grab chapstick">
+        <Header HexValue="0xA0"/>
+    </ChapsterMessage>
+
+    <!-- Since this is a pre-programmed routine, it takes no parameters-->
+    <ChapsterMessage name="Place" Description="Performs a place routine, to set chapstick down">
+        <Header HexValue="0xA1"/>
+    </ChapsterMessage>
+
+</ChapsterProtocol>
